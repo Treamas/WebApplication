@@ -1,0 +1,1927 @@
+{
+  "id": "dbd03f14-2106-4a80-aae3-75f8d6b22ac7",
+  "version": "2.0",
+  "name": "APP -all tests",
+  "url": "http://127.0.0.1:5000/",
+  "tests": [{
+    "id": "78487fbd-468e-4676-9339-e277981a30e4",
+    "name": "CalculatorAdd",
+    "commands": [{
+      "id": "58ed9aea-1ef2-4b4d-8b77-3d95f953d49a",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2069238a-26e8-462e-97e6-f1146cc64716",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Calculator addition",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fd25d48-4f91-4f04-9bdb-b924240c9249",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b0a3ec2-fae2-4fb3-ae91-8d1d4b254528",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f21130f1-d599-455e-92da-fe805382d687",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d42a5c79-3436-4e52-a6db-185552d2cb77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df6dc121-9c64-4d52-ac00-bd223e9552ae",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 1. Add - small int",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b901f12e-86f3-46b4-b238-60222e642202",
+      "comment": "",
+      "command": "type",
+      "target": "id=add1",
+      "targets": [
+        ["id=add2", "id"],
+        ["css=#add2", "css:finder"],
+        ["xpath=//input[@id='add2']", "xpath:attributes"],
+        ["xpath=//form[@id='formAdd']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "1adf17cd-8446-4481-8ac0-d8a22cdefe39",
+      "comment": "",
+      "command": "type",
+      "target": "id=add2",
+      "targets": [
+        ["id=add2", "id"],
+        ["css=#add2", "css:finder"],
+        ["xpath=//input[@id='add2']", "xpath:attributes"],
+        ["xpath=//form[@id='formAdd']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "97b172a1-31ce-47fd-bdde-92069eb266e8",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAdd",
+      "targets": [
+        ["id=btnAdd", "id"],
+        ["css=#btnAdd", "css:finder"],
+        ["xpath=//button[@id='btnAdd']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23d15312-0dc1-4b6b-b930-3fb2f278165a",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "516e8468-d851-441b-91d5-f92c46b579ab",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "7"
+    }, {
+      "id": "08bc3c9a-6067-4d74-b0fa-57b7411d8aeb",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAddAPI",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6613dedd-a389-416c-8cac-f69473b19765",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "50000"
+    }, {
+      "id": "5f1520a6-6a63-4954-80fb-fe40c7c55ad5",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "7.0"
+    }, {
+      "id": "ec42c6ee-5041-49d7-b29c-e3e16b0119a6",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 2. Add - small float ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d11589d-d47f-47a4-bb85-23ba4922e53d",
+      "comment": "",
+      "command": "type",
+      "target": "id=add1",
+      "targets": [
+        ["id=add1", "id"],
+        ["css=#add1", "css:finder"],
+        ["xpath=//input[@id='add1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "23.2"
+    }, {
+      "id": "8aed883c-7877-4fc6-968f-bcc2f4628bd0",
+      "comment": "",
+      "command": "type",
+      "target": "id=add2",
+      "targets": [
+        ["id=add2", "id"],
+        ["css=#add2", "css:finder"],
+        ["xpath=//input[@id='add2']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "16.3"
+    }, {
+      "id": "9b2c0add-19f1-4dda-9d14-b1f804536a95",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAdd",
+      "targets": [
+        ["id=btnAdd", "id"],
+        ["css=#btnAdd", "css:finder"],
+        ["xpath=//button[@id='btnAdd']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bacbf6a4-c17e-4440-8900-f6d9ed5b6a32",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "97ff8cab-de19-437b-822f-a64a8d80a127",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "39.5"
+    }, {
+      "id": "4d535cb5-11d1-4d46-b471-8134e6e4d347",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAddAPI",
+      "targets": [
+        ["id=btnAddAPI", "id"],
+        ["css=#btnAddAPI", "css:finder"],
+        ["xpath=//button[@id='btnAddAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Add via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9664808b-646a-4170-85dd-2de5575150a4",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "8548a21d-66cb-4a06-8648-e2e81057e3b1",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "39.5"
+    }, {
+      "id": "25ac5ad6-869e-41cf-a048-209f1f4ac1fc",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 3. Add - negative value",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21ba97ad-5632-4466-817c-dc79f003e286",
+      "comment": "",
+      "command": "type",
+      "target": "id=add1",
+      "targets": [
+        ["id=add1", "id"],
+        ["css=#add1", "css:finder"],
+        ["xpath=//input[@id='add1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-1000111"
+    }, {
+      "id": "fa4a28e6-1234-49b4-814f-67bb2e65d990",
+      "comment": "",
+      "command": "type",
+      "target": "id=add2",
+      "targets": [
+        ["id=add1", "id"],
+        ["css=#add1", "css:finder"],
+        ["xpath=//input[@id='add1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1000000"
+    }, {
+      "id": "0dd50aee-a0bc-449c-89e3-533436ba1008",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAdd",
+      "targets": [
+        ["id=btnAdd", "id"],
+        ["css=#btnAdd", "css:finder"],
+        ["xpath=//button[@id='btnAdd']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8283a7d4-d061-4962-bbc4-ecc176801dd7",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "2795fad3-f24d-4836-9bb1-05fdb475eeb7",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "-111"
+    }, {
+      "id": "966df041-9452-418d-8769-c2f4253dccf5",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAddAPI",
+      "targets": [
+        ["id=btnAddAPI", "id"],
+        ["css=#btnAddAPI", "css:finder"],
+        ["xpath=//button[@id='btnAddAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Add via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f3b1960-92cd-4035-a34d-3d9e4b51e4ff",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "-111.0"
+    }, {
+      "id": "95b82ed2-f58a-4700-95e2-41fe9b58c57f",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 4. Add - large float negative",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60d42521-8151-4d6d-b563-abb8347f62f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=add1",
+      "targets": [
+        ["id=add1", "id"],
+        ["css=#add1", "css:finder"],
+        ["xpath=//input[@id='add1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "123456789.123456789"
+    }, {
+      "id": "2f1b56f4-d9cd-4683-9e62-96dfbe4fc031",
+      "comment": "",
+      "command": "type",
+      "target": "id=add2",
+      "targets": [
+        ["id=add1", "id"],
+        ["css=#add1", "css:finder"],
+        ["xpath=//input[@id='add1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-10000000.01"
+    }, {
+      "id": "0ce99a35-2fee-445c-a1d1-bc1813eb66a7",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAdd",
+      "targets": [
+        ["id=btnAdd", "id"],
+        ["css=#btnAdd", "css:finder"],
+        ["xpath=//button[@id='btnAdd']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a34e105b-aec3-4f63-a3c7-f17904a9e021",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "dab53e84-6e85-4178-b0cb-2c48f977f50b",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "113456789.11345679"
+    }, {
+      "id": "ad9f1685-28de-4dad-8b2c-372b26aae31a",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAddAPI",
+      "targets": [
+        ["id=btnAddAPI", "id"],
+        ["css=#btnAddAPI", "css:finder"],
+        ["xpath=//button[@id='btnAddAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Add via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f32062eb-812f-40c2-a47c-65111c6ad0ce",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputAdd",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "401c16cc-859e-4c6d-ae16-3129da43d95e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputAdd",
+      "targets": [],
+      "value": "113456789.11345679"
+    }]
+  }, {
+    "id": "94071184-60af-43f2-82c0-28d8686394f6",
+    "name": "CalculatorSubtract",
+    "commands": [{
+      "id": "eaf93184-b7d7-4e32-b85c-fd2301850fc2",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "291161e8-0b71-4dde-8615-bb030e1698e7",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Calculator subtraction",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17f9d0ff-ffe9-4b06-a606-a3005547c64f",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04a43f5e-f0cb-410c-8804-06bba4b1590f",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04daf0c9-18ff-43f1-8b72-16d78137b800",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd7cf07f-a89b-4a2f-9304-6c77faf553be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8acdbc2-86be-4cb0-bc40-cd2dac0750d1",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 1, Subtract - small int",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fbca3ca-0038-43eb-8b41-1122831084bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=sub1",
+      "targets": [
+        ["id=sub1", "id"],
+        ["css=#sub1", "css:finder"],
+        ["xpath=//input[@id='sub1']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "23"
+    }, {
+      "id": "1264ff3d-7840-4118-8a82-13c27fca079a",
+      "comment": "",
+      "command": "type",
+      "target": "id=sub2",
+      "targets": [
+        ["id=sub2", "id"],
+        ["css=#sub2", "css:finder"],
+        ["xpath=//input[@id='sub2']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "4f3b59ec-d7a3-48fc-bba2-670c162e870b",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubtract",
+      "targets": [
+        ["id=btnSubtract", "id"],
+        ["css=#btnSubtract", "css:finder"],
+        ["xpath=//button[@id='btnSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/p/button", "xpath:idRelative"],
+        ["xpath=//form/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Subtract')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c328573-57fe-4708-99f6-61ab559e3560",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "5cdc3878-91b4-49ce-ab80-8c6fd845ee74",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputSubtract", "id"],
+        ["css=#inputSubtract", "css:finder"],
+        ["xpath=//input[@id='inputSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[3]", "xpath:idRelative"],
+        ["xpath=//form/input[3]", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "5031ad80-110d-4bac-a30d-76dc0177a702",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubtractAPI",
+      "targets": [
+        ["id=btnSubtractAPI", "id"],
+        ["css=#btnSubtractAPI", "css:finder"],
+        ["xpath=//button[@id='btnSubtractAPI']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/p[2]/button", "xpath:idRelative"],
+        ["xpath=//form/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Subtract via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ced5a02e-df34-41ee-998c-6527e5838413",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "36c4f933-eebb-45b5-868d-f543d5d46afd",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputSubtract", "id"],
+        ["css=#inputSubtract", "css:finder"],
+        ["xpath=//input[@id='inputSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[3]", "xpath:idRelative"],
+        ["xpath=//form/input[3]", "xpath:position"]
+      ],
+      "value": "20.0"
+    }, {
+      "id": "addd84b1-1c94-4d7c-96d3-c336c5d10ea3",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 2, subtract -  small float",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "782498ea-b490-43d6-8f1b-9d2290ddc3d1",
+      "comment": "",
+      "command": "type",
+      "target": "id=sub1",
+      "targets": [
+        ["id=sub1", "id"],
+        ["css=#sub1", "css:finder"],
+        ["xpath=//input[@id='sub1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "22.698"
+    }, {
+      "id": "445bc0af-5ed0-4427-a958-79c60c26f47d",
+      "comment": "",
+      "command": "type",
+      "target": "id=sub2",
+      "targets": [],
+      "value": "0.3"
+    }, {
+      "id": "227bbb78-ff8c-4c50-a020-3f8ea4b37429",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubtract",
+      "targets": [
+        ["id=btnSubtract", "id"],
+        ["css=#btnSubtract", "css:finder"],
+        ["xpath=//button[@id='btnSubtract']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Subtract')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b285342d-3150-423f-bfff-94e0334127d9",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "0af89c40-4a83-4431-b8bc-d04356807e80",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputSubtract", "id"],
+        ["css=#inputSubtract", "css:finder"],
+        ["xpath=//input[@id='inputSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[3]", "xpath:idRelative"],
+        ["xpath=//form/input[3]", "xpath:position"]
+      ],
+      "value": "22.398"
+    }, {
+      "id": "2fd46e67-7db0-477c-b15c-d3f2087e4b28",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubtractAPI",
+      "targets": [
+        ["id=btnSubtractAPI", "id"],
+        ["css=#btnSubtractAPI", "css:finder"],
+        ["xpath=//button[@id='btnSubtractAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Subtract via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1ac8a3a-e710-4c77-b32e-9b9656920537",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "e8a7fe08-11df-46d5-80ba-a9781f4aa4f6",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputSubtract", "id"],
+        ["css=#inputSubtract", "css:finder"],
+        ["xpath=//input[@id='inputSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[3]", "xpath:idRelative"],
+        ["xpath=//form/input[3]", "xpath:position"]
+      ],
+      "value": "22.398"
+    }, {
+      "id": "ef9ef7c3-f1e3-4d5b-aa6f-2fbc3c9028d2",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 3, subtract -  large negative float",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4534ef0-ffc6-4d87-a6ae-3fc6300be3c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=sub1",
+      "targets": [
+        ["id=sub1", "id"],
+        ["css=#sub1", "css:finder"],
+        ["xpath=//input[@id='sub1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "-123456789.123456789"
+    }, {
+      "id": "068871ca-1ff5-4fa3-aaf3-fb241101b02f",
+      "comment": "",
+      "command": "type",
+      "target": "id=sub2",
+      "targets": [
+        ["id=sub1", "id"],
+        ["css=#sub1", "css:finder"],
+        ["xpath=//input[@id='sub1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "-100000000.1"
+    }, {
+      "id": "2deb89d1-877d-4425-886f-424b87c9de0c",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubtract",
+      "targets": [
+        ["id=btnSubtract", "id"],
+        ["css=#btnSubtract", "css:finder"],
+        ["xpath=//button[@id='btnSubtract']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Subtract')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0532ff59-aa65-4ea3-a05e-e954fec24917",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "68484b7d-e283-47d6-9b92-0be31dcaea2c",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputSubtract", "id"],
+        ["css=#inputSubtract", "css:finder"],
+        ["xpath=//input[@id='inputSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[3]", "xpath:idRelative"],
+        ["xpath=//form/input[3]", "xpath:position"]
+      ],
+      "value": "-23456789.023456797"
+    }, {
+      "id": "9cf1816e-81e5-4646-8ead-99cfaab3e13f",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubtractAPI",
+      "targets": [
+        ["id=btnSubtractAPI", "id"],
+        ["css=#btnSubtractAPI", "css:finder"],
+        ["xpath=//button[@id='btnSubtractAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[2]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Subtract via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02fdc961-adb3-462d-9cb6-a9c6ac385026",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "920cd93d-1e27-4f5c-8b7e-7deba0788ad5",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputSubtract",
+      "targets": [
+        ["id=inputSubtract", "id"],
+        ["css=#inputSubtract", "css:finder"],
+        ["xpath=//input[@id='inputSubtract']", "xpath:attributes"],
+        ["xpath=//form[@id='formSubtract']/input[3]", "xpath:idRelative"],
+        ["xpath=//form/input[3]", "xpath:position"]
+      ],
+      "value": "-23456789.023456797"
+    }]
+  }, {
+    "id": "ad502daa-87a0-4fbb-b344-98b175209d7f",
+    "name": "CalculatorMultiply",
+    "commands": [{
+      "id": "079151d9-85d7-4aa7-9716-0dddfe9d74b6",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1282c2a-945a-4b9a-8dda-6604494c8dce",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Calculator multiplication",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ddcf4e2-317a-4ced-8d5c-d3d6c143a74a",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b0e7874-b871-4607-ae0c-101d1f45cc94",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5342d2c9-f776-4890-bde9-b3dfbdcf1fb2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8770175-2a44-4b12-8b43-e61055e922c5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e3ac710-8a1f-4686-839c-6bfa93c4ab42",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 1 multiply - small int",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cba85e4f-7e1e-43df-bb50-8b32136e9727",
+      "comment": "",
+      "command": "type",
+      "target": "id=multi1",
+      "targets": [
+        ["id=multi1", "id"],
+        ["css=#multi1", "css:finder"],
+        ["xpath=//input[@id='multi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "6"
+    }, {
+      "id": "33bce1bd-5aea-4717-ad34-a749b42a6cc1",
+      "comment": "",
+      "command": "type",
+      "target": "id=multi2",
+      "targets": [
+        ["id=multi1", "id"],
+        ["css=#multi1", "css:finder"],
+        ["xpath=//input[@id='multi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "f865e66a-149a-4420-8e85-57e08395bb3a",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMultiply",
+      "targets": [
+        ["id=btnMultiply", "id"],
+        ["css=#btnMultiply", "css:finder"],
+        ["xpath=//button[@id='btnMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Mulyiply')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d4eb7b4-c605-41a7-b6dc-f3d03e95196d",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "503103c2-ca41-479f-b40e-46ebd3025873",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputMultiply", "id"],
+        ["css=#inputMultiply", "css:finder"],
+        ["xpath=//input[@id='inputMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "42"
+    }, {
+      "id": "df4bcf88-b676-492a-aa26-410ff47e7e63",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMultiplyAPI",
+      "targets": [
+        ["id=btnMultiplyAPI", "id"],
+        ["css=#btnMultiplyAPI", "css:finder"],
+        ["xpath=//button[@id='btnMultiplyAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Multiply via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45631971-d3f2-4c21-be56-5d3a844f4487",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "c5a69574-2b2c-435f-9989-6e0e650cc793",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputMultiply", "id"],
+        ["css=#inputMultiply", "css:finder"],
+        ["xpath=//input[@id='inputMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "42.0"
+    }, {
+      "id": "d1036b4b-0c0a-4cf8-b9fa-586b6217a6a0",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 2. Multiply - large float",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "471eec7e-f8f6-4ee0-aee2-42fdaab90861",
+      "comment": "",
+      "command": "type",
+      "target": "id=multi1",
+      "targets": [
+        ["id=multi1", "id"],
+        ["css=#multi1", "css:finder"],
+        ["xpath=//input[@id='multi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "123456789.987654321"
+    }, {
+      "id": "fc8281e4-19e8-485b-ad17-c97209953c7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=multi2",
+      "targets": [
+        ["id=multi1", "id"],
+        ["css=#multi1", "css:finder"],
+        ["xpath=//input[@id='multi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "643269"
+    }, {
+      "id": "2d103d59-cd95-422a-8a68-ce3dd7de7b2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMultiply",
+      "targets": [
+        ["id=btnMultiply", "id"],
+        ["css=#btnMultiply", "css:finder"],
+        ["xpath=//button[@id='btnMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Mulyiply')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73fa7e5d-9025-4b17-af67-e4fcec71c129",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "49ea9622-152c-4e8e-b182-4a6a7a9f0ee8",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputMultiply", "id"],
+        ["css=#inputMultiply", "css:finder"],
+        ["xpath=//input[@id='inputMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "79415925838568.4"
+    }, {
+      "id": "2b5258de-34a4-4b4c-862f-4b50988da703",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMultiplyAPI",
+      "targets": [
+        ["id=btnMultiplyAPI", "id"],
+        ["css=#btnMultiplyAPI", "css:finder"],
+        ["xpath=//button[@id='btnMultiplyAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Multiply via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3227d07-2b6a-4a13-86e2-068ebfc73636",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "dda79fa4-6fd6-470b-9086-190ca7a3b2cd",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputMultiply", "id"],
+        ["css=#inputMultiply", "css:finder"],
+        ["xpath=//input[@id='inputMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "79415925838568.4"
+    }, {
+      "id": "5aa09e82-27ca-45fe-9ada-7d8c14fecbf4",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 3. Multiply - large negative float",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10192db7-ffdb-4a7a-b27b-c2a603ad9491",
+      "comment": "",
+      "command": "type",
+      "target": "id=multi1",
+      "targets": [
+        ["id=multi1", "id"],
+        ["css=#multi1", "css:finder"],
+        ["xpath=//input[@id='multi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "5000000"
+    }, {
+      "id": "2365658e-dd2c-4c7c-a82e-1cc8167e2ca8",
+      "comment": "",
+      "command": "type",
+      "target": "id=multi2",
+      "targets": [],
+      "value": "-.05"
+    }, {
+      "id": "ffee604b-c171-42b9-9656-c7a80d1111ef",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMultiply",
+      "targets": [
+        ["id=btnMultiply", "id"],
+        ["css=#btnMultiply", "css:finder"],
+        ["xpath=//button[@id='btnMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Mulyiply')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64e7a388-875a-49b0-9a0e-9c54ad6dff54",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "3c7a7b72-7bf2-49f5-bce0-9a1f304c2deb",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputMultiply", "id"],
+        ["css=#inputMultiply", "css:finder"],
+        ["xpath=//input[@id='inputMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "-250000"
+    }, {
+      "id": "7553c587-be51-4333-9901-e16145ee9141",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMultiplyAPI",
+      "targets": [
+        ["id=btnMultiplyAPI", "id"],
+        ["css=#btnMultiplyAPI", "css:finder"],
+        ["xpath=//button[@id='btnMultiplyAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Multiply via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe2ca8b6-e21f-49ec-a56f-a5445184a72e",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "5156c847-03f0-4f6f-868f-f89d048d525f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputMultiply",
+      "targets": [
+        ["id=inputMultiply", "id"],
+        ["css=#inputMultiply", "css:finder"],
+        ["xpath=//input[@id='inputMultiply']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[3]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "-250000.0"
+    }]
+  }, {
+    "id": "a072cced-3bb5-4190-abc9-6a5ab47ef696",
+    "name": "CalculatorDivide",
+    "commands": [{
+      "id": "b62f41b4-0b6b-4701-99e6-6286ca477dd5",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02498a5f-68fc-4d97-adfe-00748bcc95c8",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Calculator division",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0585c60a-bdc2-4a2d-88a6-1000402d9e34",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15f1cc5e-fe85-41e0-af61-f3cbc4f2978c",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae37c90b-a4bf-474a-bc23-7eb554e47bdd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b204f68-0935-438c-bd60-01ea33d3959b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0bc358c-66d5-4116-9985-10b432d04d8f",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 1 - divide - small int",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4de83527-32bf-47a0-a0c7-1a65e274683f",
+      "comment": "",
+      "command": "type",
+      "target": "id=divi1",
+      "targets": [
+        ["id=divi1", "id"],
+        ["css=#divi1", "css:finder"],
+        ["xpath=//input[@id='divi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "9"
+    }, {
+      "id": "26741d01-96a6-4bdd-8e7e-991937fee5c4",
+      "comment": "",
+      "command": "type",
+      "target": "id=divi2",
+      "targets": [
+        ["id=divi2", "id"],
+        ["css=#divi2", "css:finder"],
+        ["xpath=//input[@id='divi2']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[2]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "a1651b8c-cd74-43b6-9940-a66dfb43d85a",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDivide",
+      "targets": [
+        ["id=btnDivide", "id"],
+        ["css=#btnDivide", "css:finder"],
+        ["xpath=//button[@id='btnDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/p/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/p/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Divide')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "925ee13b-dd1c-4459-88dc-b76ea3bda335",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "2829fec5-5f54-4baa-9f4f-e4e65fb7823f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "1796c5fe-9d34-4090-a38f-df3c45b98881",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "96563be4-07f7-4784-a0c8-36d24d10a435",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDivideAPI",
+      "targets": [
+        ["id=btnDivideAPI", "id"],
+        ["css=#btnDivideAPI", "css:finder"],
+        ["xpath=//button[@id='btnDivideAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Divide via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c7fcf2d-0dd2-4f34-b0fd-bbc94bc4389e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "3.0"
+    }, {
+      "id": "80658817-6373-4a80-b411-2bed73005cfb",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 2 divide - small float",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "968bc07d-ac0d-4bcf-addc-a1d5c297cfc6",
+      "comment": "",
+      "command": "type",
+      "target": "id=divi1",
+      "targets": [
+        ["id=divi1", "id"],
+        ["css=#divi1", "css:finder"],
+        ["xpath=//input[@id='divi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "999.999"
+    }, {
+      "id": "34d6f36d-bd81-495a-a92f-f0d307d748eb",
+      "comment": "",
+      "command": "type",
+      "target": "id=divi2",
+      "targets": [
+        ["id=divi1", "id"],
+        ["css=#divi1", "css:finder"],
+        ["xpath=//input[@id='divi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "-333.333"
+    }, {
+      "id": "5ee8b5be-71f9-444a-bad4-17558a1aca36",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDivide",
+      "targets": [
+        ["css=#btnDivide > .fa", "css:finder"],
+        ["xpath=//button[@id='btnDivide']/i", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/p/button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29ce95c8-2c45-4426-8d58-40ca452bbdfb",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "fd3844ec-7994-49c4-a3cd-f7c781b66fba",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "-3"
+    }, {
+      "id": "26dedf82-7a90-4d4d-b1af-fef2e853b8ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDivideAPI",
+      "targets": [
+        ["id=btnDivideAPI", "id"],
+        ["css=#btnDivideAPI", "css:finder"],
+        ["xpath=//button[@id='btnDivideAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Divide via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a095253d-fb99-45e9-8e1b-c5d0699c3d62",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "841b1e8e-a9e5-477a-a56f-5ecd6a9ceb1e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "-3.0"
+    }, {
+      "id": "c55e0ba3-af06-4c32-9cbf-5dc84f169055",
+      "comment": "",
+      "command": "echo",
+      "target": "********** Test 3 divide - divide by zero message changed from default",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "532e5c89-fcff-4f63-adf8-d1a6604eaae7",
+      "comment": "",
+      "command": "type",
+      "target": "id=divi1",
+      "targets": [
+        ["id=divi1", "id"],
+        ["css=#divi1", "css:finder"],
+        ["xpath=//input[@id='divi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "79856.23"
+    }, {
+      "id": "8679a330-7ad6-47c5-bde1-5f2877a3ba91",
+      "comment": "",
+      "command": "type",
+      "target": "id=divi2",
+      "targets": [
+        ["id=divi1", "id"],
+        ["css=#divi1", "css:finder"],
+        ["xpath=//input[@id='divi1']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "cfcfee25-4ac4-4f06-980a-feedece8c9bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDivide",
+      "targets": [
+        ["css=#btnDivide > .fa", "css:finder"],
+        ["xpath=//button[@id='btnDivide']/i", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/p/button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9a3b656-d5ee-49ca-807d-20f54e2e9d4e",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "8281f18f-5279-484a-857c-21d04cbbb018",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=inputDivide",
+      "targets": [],
+      "value": "Nan"
+    }, {
+      "id": "9e0bd78e-c908-436a-9d61-2a2e78820710",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=inputDivide",
+      "targets": [],
+      "value": "undefined"
+    }, {
+      "id": "339e07bf-a708-4a6f-9413-60efccf78a18",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "Infinity"
+    }, {
+      "id": "218e3d67-0565-422e-88c5-837c42e8d152",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDivideAPI",
+      "targets": [
+        ["id=btnDivideAPI", "id"],
+        ["css=#btnDivideAPI", "css:finder"],
+        ["xpath=//button[@id='btnDivideAPI']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/p[2]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Divide via API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7a8e792-27b3-4432-9b4a-8e2371655c27",
+      "comment": "wait for values to update before checking result",
+      "command": "waitForElementVisible",
+      "target": "id=inputDivide",
+      "targets": [
+        ["id=inputDivide", "id"],
+        ["css=#inputDivide", "css:finder"],
+        ["xpath=//input[@id='inputDivide']", "xpath:attributes"],
+        ["xpath=//div[@id='calculator']/div/div[4]/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input[3]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "c9aadf8b-518c-4c5b-aa15-b026cbe227f8",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=inputDivide",
+      "targets": [],
+      "value": "undefined"
+    }, {
+      "id": "a643caad-e4fa-4238-94bd-fe4fe209767f",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=inputDivide",
+      "targets": [],
+      "value": "Infinity"
+    }, {
+      "id": "37118a3e-92fe-4cce-9c3f-8544999f3a9a",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=inputDivide",
+      "targets": [],
+      "value": "Nan"
+    }]
+  }, {
+    "id": "b7e091b0-80a3-4e49-8a8c-39253219731c",
+    "name": "Journal - Load and Select",
+    "commands": [{
+      "id": "b3a78a39-41ff-4580-b9e1-073b445827e1",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14e066b5-115c-423a-a750-aa991d6d8d46",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Load Journal and check content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aab81dc-3fa9-4b71-a2c9-1673b088f748",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64883e90-5b8b-4ca1-8289-f6f85d7cd6aa",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97163e4b-0515-4aca-b947-93a882f0bd81",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3896e296-e34b-4a98-8f58-93b78a0803a3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d50fdc2d-1450-41c2-a555-5612cc0cca97",
+      "comment": "",
+      "command": "echo",
+      "target": "** Check first item content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19d7ad76-4bf4-47d8-ad04-d39d79cdf457",
+      "comment": "",
+      "command": "click",
+      "target": "id=0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92d037c3-9814-428a-bb32-7b4da5f8173f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=idEntry",
+      "targets": [],
+      "value": "0"
+    }, {
+      "id": "a33f62a7-6993-4ba7-bec5-537b70a1b8b1",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=dateEntry",
+      "targets": [],
+      "value": "01/03/2021"
+    }, {
+      "id": "973d159b-2032-4e68-8d53-a0dbc3f2a774",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=namEntry",
+      "targets": [],
+      "value": "Started work"
+    }, {
+      "id": "5806c3aa-d907-4475-b021-866d133983af",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=txtNote",
+      "targets": [],
+      "value": "Read the brief and looked at the template"
+    }, {
+      "id": "cd42d69e-1060-4554-baf5-2bcfcd822314",
+      "comment": "",
+      "command": "echo",
+      "target": "** Check last item content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7881acad-2269-4a78-9f55-e7a766975c39",
+      "comment": "",
+      "command": "click",
+      "target": "id=4",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "babb7116-953f-4d58-ac98-fcb8cb13e908",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=idEntry",
+      "targets": [],
+      "value": "4"
+    }, {
+      "id": "42e5385f-1f5d-4017-82b6-3a94de121530",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=dateEntry",
+      "targets": [],
+      "value": "07/04/2021"
+    }, {
+      "id": "f96abc72-58b7-4d9b-861d-7f1d189a4c61",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=namEntry",
+      "targets": [],
+      "value": "Thought of the day"
+    }, {
+      "id": "a7d7b2d7-e05d-4541-a5fe-04116bc4bbae",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=txtNote",
+      "targets": [],
+      "value": "Thought for the day section done"
+    }, {
+      "id": "a32cab79-e256-476e-bc41-a07fccf72257",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1e632e29-2b1d-42c8-8dfd-f60d1a58dc54",
+    "name": "Journal - add entry",
+    "commands": [{
+      "id": "c96f1670-cb28-4d51-b9eb-e43061ef613b",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9bd5d12-01e5-4860-ba30-68b7e5c466a4",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Journal add content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "604fea5c-02ea-4dc7-a4d3-186bda4b994a",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50ecfe68-51b6-4d70-a563-0ee4667f932f",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f789b1d-a3af-4dd9-8adb-60dd04aadca5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7373076-a049-4b35-bc1c-04c290f97334",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12e4e666-ffa2-41c2-9aeb-ce3bfd7c4931",
+      "comment": "",
+      "command": "echo",
+      "target": "** New entry - inputting data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fa254ab-da15-4a53-aeab-77d7c13d699d",
+      "comment": "",
+      "command": "type",
+      "target": "id=idAdd",
+      "targets": [],
+      "value": "5"
+    }, {
+      "id": "c57de06b-ae5e-485d-829f-88fb9cdb0e19",
+      "comment": "",
+      "command": "type",
+      "target": "id=dateAdd",
+      "targets": [],
+      "value": "18/04/2021"
+    }, {
+      "id": "a74b23f4-5cff-4c99-aadc-19aad922b281",
+      "comment": "",
+      "command": "type",
+      "target": "id=nameAdd",
+      "targets": [],
+      "value": "Submit"
+    }, {
+      "id": "f536b9b0-d79e-4897-9bc3-60c7ea02ed3b",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtAdd",
+      "targets": [],
+      "value": "Submit early and often"
+    }, {
+      "id": "bfc14e20-3264-4d5e-944a-62623cf9a308",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnAddEntry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53742f00-9453-4c81-9fb6-23afabd0d504",
+      "comment": "",
+      "command": "echo",
+      "target": "**   Check existence and attribute values of new entry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02b3dc78-50b1-4333-a2b1-9376b795749f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=5",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "eb41a86c-cb35-4bd8-8330-78e8397a1df2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16d96829-461d-4839-8058-b35a35133d00",
+      "comment": "",
+      "command": "echo",
+      "target": "** New entry added",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "30361e28-b064-4943-8b38-9c75db40b29e",
+    "name": "Journal - delete entry",
+    "commands": [{
+      "id": "63123b53-917a-4228-b017-cb40992397dd",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83917f77-4bc3-4ca3-af7c-67b5140e1e1d",
+      "comment": "",
+      "command": "echo",
+      "target": "**  Testing: Journal delete content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf0cefe7-c7d6-438a-88eb-947272934538",
+      "comment": "",
+      "command": "echo",
+      "target": "**   WARNING: Load test data file before running tests",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "331256f5-a707-45be-a1ca-00de1f905a35",
+      "comment": "",
+      "command": "echo",
+      "target": "**************************************************************",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1f06e57-762a-449f-b4fa-9de92ea2ca4f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b0aab86-9c9a-4357-97ef-f4dec0417b11",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "500x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f98f071c-c6e6-4419-92c1-ba4c4866fa41",
+      "comment": "",
+      "command": "click",
+      "target": "id=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "677c20e3-529c-49cc-9524-0a683c07fee1",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnDeleteEntry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64150eec-49c9-4558-a703-819d9565e15d",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "id=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "feb14057-3604-4852-a4d7-1a3037c5cee2",
+      "comment": "",
+      "command": "echo",
+      "target": "** Item from original list deleted and verified not present",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2c4baff5-8cc2-4594-99f4-da72adc8a106",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["78487fbd-468e-4676-9339-e277981a30e4"]
+  }],
+  "urls": ["https://app2021a-bedji.run-eu-central1.goorm.io/", "https://app2021a-bedji.run-eu-central1.goorm.io/#calculator", "http://127.0.0.1:5000/?#calculator", "http://127.0.0.1:5000/"],
+  "plugins": []
+}

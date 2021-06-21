@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APP Assignment</title>
+    <link rel="stylesheet" href="static/app.css">
+    <!--<link rel="stylesheet" href="bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+</head>
+<body>
+    <!-- Navbar -->
+    <!--<div class="navbar">
+        Application of Programming Principles
+        navbar links
+        <div>
+            <div>ABOUT</div>
+            <div>CALCULATOR</div>
+            JOURNAL
+        </div>
+    </div>-->
+    <nav>
+        <ul>
+            <li id="navbar"><a href="#top">APPLICATION OF PROGRAMMING PRINCIPLES</a></li>
+            <li id="navbar"><a href="#home">ABOUT</a></li>
+            <li id="navbar"><a href="#calculator">CALCULATOR</a></li>
+            <li id="navbar"><a href="#journal">JOURNAL</a></li>
+            <li id="navbar"><a href="#totd">THOUGHT OF THE DAY</a></li>
+        </ul>
+    </nav>
+
+<!-- Header-->
+    <header>
+        <div>
+            <p id="learn">Learn more and start today</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div id="home">
+        <h3>About APP</h3>
+        <p>Key features of the assignment</p>
+        <div>
+            <p >Calculator</p>
+            <p>The calculator can add, subtract, multiply and divide numbers. There are two methods of calculation: purely using JavaScript code and by sending the inputted values to the python function. </p>
+        </div>
+        <div>
+          <p >Journal</p>
+          <p>All the journal entries are stored in this section. You can select, add and remove journal entries.</p>
+        </div>
+        <div >
+          <p >Design</p>
+          <p>The website's design uses a triadic color scheme. All the content sections are grouped together. You can navigate to each section using the navigation bar above.</p>
+        </div>
+        <div>
+          <p >Thoughts</p>
+          <p>All the thoughts are stored in this section. You can select, add and remove thoughts.</p>
+        </div>
+    </div>
+
+<!-- Calculator Section -->
+    <div id="calculator">
+      <h3>Calculator</h3>
+      <p>The one who runs the sums</p>
+        <div >
+            <h3>Add</h3>
+            <input type="number" id="add1"/> + <input type="number" id="add2"/> = <input type="text" id="inputAdd"/>
+            <p><button onclick="addNumbers()" id="btnAdd">Add</button></p>
+            <p><button id="btnAddAPI">Add via API</button></p>
+        </div>
+        <div >
+            <h3>Subtract</h3>
+            <input type="number" id="sub1"/> - <input type="number" id="sub2"/> = <input type="text" id="inputSubtract"/>
+            <p><button id="btnSubtract">Subtract</button></p>
+            <p><button id="btnSubtractAPI"> Subtract via API</button></p>
+        </div>
+        <div >
+            <h3>Multiply</h3>
+            <input type="number" id="multi1"/> x <input type="number" id="multi2"/> = <input type="text" id="inputMultiply"/>
+            <p><button id="btnMultiply">Multiply</button></p>
+            <p><button id="btnMultiplyAPI">Multiply via API</button></p>
+        </div>
+        <div >
+          <h3>Divide</h3>
+            <input type="number" id="divi1"/> / <input type="number" id="divi2"/> = <input type="text" id="inputDivide"/>
+            <p><button id="btnDivide">Divide</button></p>
+            <p><button id="btnDivideAPI">Divide via API</button></p>
+        </div>
+    </div>
+
+    <!-- Journal Section -->
+
+    <div id="journal">
+        <h3>Journal</h3>
+        <p>What I've done</p>
+        <div>
+            <h3>Journal Entries</h3>
+            <!--<ol id="listEntries" onclick="populateEntry(String(entry.name))">-->
+            <!--<ol id="listEntries" onclick="populateEntry(entry)"></ol>-->
+            <ol id="listEntries">
+              <li>item 1</li>
+              <li>item 2</li>
+            </ol>
+        <!--<div>
+            <button id="btnUploadJournal">upload journal</button>
+        </div>-->
+    </div>
+
+    <div id="journalItem" >
+        <h3>Selected Entry</h3>
+        <div><div><div><div>
+            <label for="idEntry">ID: </label>
+            <input type="text" id="idEntry"></div>
+            <label for="dateEntry">Date: </label>
+            <input type="text" id="dateEntry"></div>
+            <label for="namEntry">Name: </label>
+            <input type="text" id="namEntry"></div>
+            <label for="txtNote">Notes: </label>
+            <textarea id="txtNote" name="txtNote" rows="4" cols="50" ></textarea></div>
+            <div><button id="btnDeleteEntry">Delete</button></div></div>
+
+
+
+    <div id="addItem" >
+        <h3>Add Entry</h3>
+        <div><div><div>
+            <label for="idEntry">ID:</label>
+            <input type="text" id="idAdd" required></div>
+            <label for="dateEntry">Date: </label>
+            <input type="text" id="dateAdd" required></div>
+            <label for="nameEntry">Name: </label>
+            <input type="text" id="nameAdd" required></div>
+            <label for="txtEntry">Notes: </label>
+            <textarea id="txtAdd" name="txtAdd" rows="4" cols="50" required></textarea></div>
+            <div><button id="btnAddEntry">Add</button></div>
+    </div>
+    </div>
+
+    <div id="totd">
+        <h3>Thought of the day</h3>
+        <p id="thought">The one who thinks the thoughts</p>
+
+        <h3>The list of all thoughts</h3>
+        <div>
+            <!--<ol id="theThoughtEntries" onclick="selectThought(idea)">-->
+            <ol id="theThoughtEntries">
+              <li>item 1</li>
+              <li>item 2</li>
+            </ol>
+
+
+        <h3>Selected Thought</h3>
+        <div>
+            <label for="thoughtEntry">Thought: </label>
+            <input type="text" id="selectedThought"></div>
+            <label for="quoteeEntry">Quotee: </label>
+            <input type="text" id="selectedQuotee"></div>
+            <div><button id="btnDeleteThought">Delete</button></div>
+
+
+        <div id="addItem">
+
+        <h3>Add Entry</h3>
+        <div>
+            <label for="thoughtEntry">Thought:</label>
+            <input type="text" id="thoughtAdd" required></div>
+            <label for="quoteeEntry">Quotee:</label>
+            <input type="text" id="quoteeAdd" required></div>
+            <div><button id="btnAddThought">Add</button></div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="tothetop"><a href="#top">To the top</a></div>
+    </footer>
+
+<script src="../static/scripts/app.js"></script>
+</body>
+</html>
